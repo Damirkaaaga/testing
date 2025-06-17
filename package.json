@@ -1,0 +1,23 @@
+{
+  "name": "testing",
+  "version": "1.0.0",
+  "description": "API Testing Homework",
+  "main": "index.js",
+  "type": "module",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "axios": "^1.10.0",
+    "chai": "^5.2.0",
+    "dotenv": "^16.5.0",
+    "mocha": "^11.6.0",
+    "nock": "^14.0.5"
+  }
+}
