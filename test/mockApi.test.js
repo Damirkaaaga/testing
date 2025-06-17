@@ -69,7 +69,7 @@ describe("Mocked API response tests", () => {
 
     const response = await axios.get(`${BASE_URL}/users/204`);
     expect(response.status).to.equal(204);
-    expect(response.data).to.be.empty;
+    expect(response.data === "" || !response.data).to.be.true;
   });
 
   it("should return 403 Forbidden", async () => {
@@ -100,7 +100,7 @@ describe("Mocked API response tests", () => {
     }
   });
 
-  it(" should return 502 Bad Gateway", async () => {
+  it("should return 502 Bad Gateway", async () => {
     nock(BASE_URL)
       .get("/users/502")
       .reply(502, { error: "Bad Gateway", details: "Upstream error" });
